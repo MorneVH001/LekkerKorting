@@ -16,9 +16,6 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
-// MongoDB connection setup
-mongoose.connect('YOUR_MONGODB_CONNECTION_STRING', { useNewUrlParser: true, useUnifiedTopology: true });
-
 // Route to search for products
 app.get('/search', async (req, res) => {
   const query = req.query.query;
