@@ -1,6 +1,13 @@
+const mongoose = require('mongoose');
+mongoose.set('strictQuery', false);
+
+const MONGO_URI = process.env.MONGODB_URI;
+mongoose.connect(MONGO_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('MongoDB error:', err));
+
 const express = require('express');
 const puppeteer = require('puppeteer');
-const mongoose = require('mongoose');
 const Stripe = require('stripe');
 const stripe = Stripe('YOUR_STRIPE_SECRET_KEY'); // Get this from the Stripe dashboard
 
