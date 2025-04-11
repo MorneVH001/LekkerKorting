@@ -1,0 +1,11 @@
+{
+  "name": "lekkerkorting-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^19.0.0",
+    "mongoose": "^6.0.0",
+    "stripe": "^8.0.0"
+  }
+}
